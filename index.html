@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional portfolio of [Your Name], showcasing skills and projects.">
+  <title>[Your Name] | Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Dark Mode Toggle -->
+  <button id="theme-toggle" aria-label="Toggle dark mode">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Hi, I'm <span class="highlight">[Your Name]</span></h1>
+      <p class="subtitle">Web Developer | Designer | Problem Solver</p>
+      <a href="#projects" class="btn btn-primary">View My Work</a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-content">
+      <img src="images/profile.jpg" alt="Profile Photo" class="profile-img">
+      <div class="about-text">
+        <p>I'm a passionate developer with expertise in front-end and back-end technologies. I love building intuitive, performant, and accessible web applications.</p>
+        <p>When I'm not coding, I enjoy [hobbies/interests].</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <h2 class="section-title">My Skills</h2>
+    <div class="skills-container">
+      <div class="skill-category">
+        <h3>Technical</h3>
+        <ul class="skill-list">
+          <li><i class="fab fa-html5"></i> HTML5</li>
+          <li><i class="fab fa-css3-alt"></i> CSS3</li>
+          <li><i class="fab fa-js"></i> JavaScript</li>
+          <li><i class="fab fa-react"></i> React</li>
+          <li><i class="fab fa-node"></i> Node.js</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>Soft Skills</h3>
+        <ul class="skill-list">
+          <li><i class="fas fa-comments"></i> Communication</li>
+          <li><i class="fas fa-users"></i> Teamwork</li>
+          <li><i class="fas fa-lightbulb"></i> Problem Solving</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section (with Filtering) -->
+  <section id="projects" class="section">
+    <h2 class="section-title">My Projects</h2>
+    <div class="project-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="mobile">Mobile</button>
+    </div>
+    <div class="projects-grid">
+      <!-- Project items will be dynamically filtered -->
+      <div class="project-card" data-category="web">
+        <img src="images/project1.jpg" alt="Project 1">
+        <h3>E-Commerce Website</h3>
+        <p>Built with React and Node.js. Features cart functionality and payment integration.</p>
+        <a href="#" class="btn btn-secondary">Live Demo</a>
+      </div>
+      <div class="project-card" data-category="mobile">
+        <img src="images/project2.jpg" alt="Project 2">
+        <h3>Fitness App</h3>
+        <p>React Native app for tracking workouts and nutrition.</p>
+        <a href="#" class="btn btn-secondary">View Code</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section (with Validation) -->
+  <section id="contact" class="section">
+    <h2 class="section-title">Get In Touch</h2>
+    <form id="contact-form" class="contact-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        <span class="error-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <span class="error-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+        <span class="error-message"></span>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+      <div id="form-success" class="success-message"></div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="social-links">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+    <p>&copy; 2023 [Your Name]. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
